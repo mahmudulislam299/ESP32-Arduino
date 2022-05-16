@@ -1,0 +1,16 @@
+
+UART	RX IO	TX IO	CTS	RTS
+UART0	GPIO3	GPIO1	N/A	N/A
+UART1	GPIO9	GPIO10	GPIO6	GPIO11
+UART2	GPIO16	GPIO17	GPIO8	GPIO7
+
+
+
+/*
+ * There are three serial ports on the ESP known as U0UXD, U1UXD and U2UXD.
+ * 
+ * U0UXD is used to communicate with the ESP32 for programming and during reset/boot.
+ * U1UXD is unused and can be used for your projects. Some boards use this port for SPI Flash access though
+ * U2UXD is unused and can be used for your projects.
+ * 
+*/

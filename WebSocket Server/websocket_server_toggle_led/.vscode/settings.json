@@ -1,0 +1,30 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.colorCustomizations": {
+        "terminal.background":"#292727",
+        "terminal.foreground":"#7afa47",
+        "terminalCursor.background":"#a1927c",
+        "terminalCursor.foreground":"#A89984",
+        "terminal.ansiBlack":"#1D2021",
+        "terminal.ansiBlue":"#0D6678",
+        "terminal.ansiBrightBlack":"#665C54",
+        "terminal.ansiBrightBlue":"#0D6678",
+        "terminal.ansiBrightCyan":"#8BA59B",
+        "terminal.ansiBrightGreen":"#95C085",
+        "terminal.ansiBrightMagenta":"#128bfc",
+        "terminal.ansiBrightRed":"#ce1717dc",
+        "terminal.ansiBrightWhite":"#FDF4C1",
+        "terminal.ansiBrightYellow":"#f8fc04",
+        "terminal.ansiCyan":"#8BA59B",
+        "terminal.ansiGreen":"#95C085",
+        "terminal.ansiMagenta":"#8F4673",
+        "terminal.ansiRed":"#b3301f",
+        "terminal.ansiWhite":"#A89984",
+        "terminal.ansiYellow":"#FAC03B"
+    },
+    "code-runner.runInTerminal": true,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.dimInactiveRegions": false,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
+    "C_Cpp.errorSquiggles": "Disabled"
+}

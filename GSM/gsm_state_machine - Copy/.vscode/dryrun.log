@@ -1,0 +1,5 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'd:/All Practice/ESP32/GSM/gsm_state_machine'
+arduino-cli compile -b esp32:esp32:esp32:PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=none --build-property build.extra_flags="-DESP32_LILYGO" --warnings all 
+make: Leaving directory 'd:/All Practice/ESP32/GSM/gsm_state_machine'
+ 

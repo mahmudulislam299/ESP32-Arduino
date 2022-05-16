@@ -1,0 +1,40 @@
+Client-Server Models
+1.HTTP ( single request >>>
+	   <<< single response)
+
+2.AJAX
+( multiple request >>>
+  <<< multiple response
+:: without refresh)
+
+AJAX is real time communication between client and server
+
+
+-----------------
+WebSocket
+-----------------
+1. Full duplex, bidirectional communication protocol
+2. Allow real time data flow
+3. WebSocket is HTTP upgrade (uses same TCP connection)
+4. Application: Web based gaming, chatting
+
+
+
+*********                         **********
+Server                            client  
+(ESP32)                           (browser)
+*********                         **********
+
+	Websocket handshake (HTTP upgrade)
+	<<-------------------------------
+
+	Connection opened (HTTP 101)
+	------------------------------->>
+
+	Bidrectional Messages
+	<<------------------------------->>
+	Open and persist connection
+
+	one side closes channel 
+	<<-------------------------------->>
+	Connection closed
