@@ -15,28 +15,37 @@
  * AT+CBC – will return the lipo battery state. The second number is the % full (in this case its 93%) and the third number is the actual voltage in mV (in this case, 3.877 V)
  */
 
-//#include <SoftwareSerial.h>
-#define TINY_GSM_MODEM_SIM800
-
-#include <TinyGsmClient.h>
-#include <PubSubClient.h>
-#include <ArduinoHttpClient.h>
 
 
-const char apn[]      = "gpinternet"; //"gpinternet"; //WAP
-const char gprsUser[] = "";
-const char gprsPass[] = "";
+//#define SerialAT Serial2
+//#define MODEM_RST            5
+//#define MODEM_PWKEY          4
+//#define MODEM_POWER_ON       23
+//#define MODEM_TX             17
+//#define MODEM_RX             16
+//#define SERIAL_AT_BAUD_RATE  115200
 
-
+#define SerialAT Serial1
 #define MODEM_RST            5
-#define MODEM_PWKEY          100
-#define MODEM_POWER_ON       101
-#define MODEM_TX             17
-#define MODEM_RX             16
-#define SERIAL_AT_BAUD_RATE  38400
+#define MODEM_PWKEY          4
+#define MODEM_POWER_ON       23
+#define MODEM_TX             27
+#define MODEM_RX             26
+#define SERIAL_AT_BAUD_RATE  115200
 
-//Create software serial object to communicate with SIM800L
-//SoftwareSerial Serial2(3, 2); //SIM800L Tx & Rx is connected to Arduino #3 & #2
+int state = 0;
+int nextState = 0;
+uint32_t prevMillis = 0;
+
+enum
+{
+  GSM_1 = 1,
+  GSM_2 = 2,
+  GSM_3 = 3,
+  GSM_4 = 4,
+  GSM_5 = 5,
+}State_t;
+
 
 void setup()
 {
@@ -53,38 +62,80 @@ void setup()
   // To skip it, call init() instead of restart()
   Serial.println("Initializing modem...");
   //Begin serial communication with Arduino and Arduino IDE (Serial Monitor)
-  Serial.begin(9600);
+  Serial.begin(115200);
   
   //Begin serial communication with Arduino and SIM800L
-  Serial2.begin(9600);
+  //  Serial2.begin(115200);
+  SerialAT.begin(115200, SERIAL_8N1, MODEM_RX, MODEM_TX);
 
   Serial.println("Initializing...");
   delay(1000);
+  state = 1; //GSM_1;
+  Serial.println("goint to " + state);
 
-  Serial2.println("AT"); //Once the handshake test is successful, it will back to OK
-  updateSerial();
-  Serial2.println("AT+CSQ"); //Signal quality test, value range is 0-31 , 31 is the best
-  updateSerial();
-  Serial2.println("AT+CCID"); //Read SIM information to confirm whether the SIM is plugged
-  updateSerial();
-  Serial2.println("AT+CREG?"); //Check whether it has registered in the network
-  updateSerial();
+//  SerialAT.println("AT"); //Once the handshake test is successful, it will back to OK
+//  updateSerial();
+//  SerialAT.println("AT+CSQ"); //Signal quality test, value range is 0-31 , 31 is the best
+//  updateSerial();
+//  SerialAT.println("AT+CCID"); //Read SIM information to confirm whether the SIM is plugged
+//  updateSerial();
+//  SerialAT.println("AT+CREG?"); //Check whether it has registered in the network
+//  updateSerial();
 }
 
 void loop()
 {
+  GSM_Func();
   updateSerial();
 }
 
 void updateSerial()
 {
-  delay(500);
-  while (Serial.available()) 
+//  delay(500);
+//  while (Serial.available()) 
+//  {
+//    SerialAT.write(Serial.read());//Forward what Serial received to Software Serial Port
+//  }
+  while(SerialAT.available()) 
   {
-    Serial2.write(Serial.read());//Forward what Serial received to Software Serial Port
+    Serial.write(SerialAT.read());//Forward what Software Serial received to Serial Port
   }
-  while(Serial2.available()) 
+}
+
+
+void GSM_Func()
+{
+
+  switch(state)
   {
-    Serial.write(Serial2.read());//Forward what Software Serial received to Serial Port
+    case GSM_1:
+      SerialAT.println("AT");
+      nextState = GSM_2;
+      state = GSM_5;
+      break;
+    case GSM_2:
+      SerialAT.println("AT+CSQ");
+      nextState = GSM_3;
+      state = GSM_5;
+      break;
+    case GSM_3:
+      nextState = GSM_4;
+      state = GSM_5;
+      SerialAT.println("AT+CCID");
+      break;
+    case GSM_4:
+      nextState = GSM_1;
+      state = GSM_5;
+      SerialAT.println("AT+CREG?");
+      break;
+    case GSM_5:
+      if(millis() - prevMillis >10000)
+      {
+        prevMillis = millis();
+        state = nextState;
+        Serial.println("goint to next level");
+      }
+      break;
+      
   }
 }

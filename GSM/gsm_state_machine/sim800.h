@@ -35,7 +35,7 @@
 #define MODEM_POWER_ON       101
 #define MODEM_TX             17
 #define MODEM_RX             16
-#define SERIAL_AT_BAUD_RATE  38400
+#define SERIAL_AT_BAUD_RATE  115200
 #else
 #error "No board Selected"
 #endif

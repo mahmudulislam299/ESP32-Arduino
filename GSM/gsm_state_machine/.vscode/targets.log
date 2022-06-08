@@ -8,10 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue May 10 18:38:47 2022
+# Make data base, printed on Sat May 28 11:49:54 2022
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -21,11 +23,11 @@ USERPROFILE = C:\Users\mahmu
 # environment
 LOCALAPPDATA = C:\Users\mahmu\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-aa03badf-7b06-42cb-9b1c-15f54f62bb43-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-635a9202-b5b4-4662-898d-2230c446afac-sock
 # makefile (from 'makefile', line 5)
 CFLAGS_DEVKIT = --build-property build.extra_flags="-DESP32_DEVKIT"
 # environment
-VSCODE_CWD = D:\All Practice\ESP32\GSM\gsm_state_machine
+VSCODE_CWD = C:\Users\mahmu\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -39,7 +41,9 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15092_XNKEPCGMKKLBHINL
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14832_RXMPKURHWFHZWTLR
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -53,7 +57,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\mahmu\AppData\Roaming\Code\CachedData\57fd6d0195bb9b9d1b49f6da5db789060795de47
+VSCODE_CODE_CACHE_PATH = C:\Users\mahmu\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LANG = C
 # default
@@ -69,7 +73,7 @@ MAKEFLAGS = pqrR
 # environment
 ONEDRIVE = C:\Users\mahmu\OneDrive
 # makefile
-CURDIR := d:/All Practice/ESP32/GSM/gsm_state_machine
+CURDIR := d:/all_learning/MCU_SOC_MPU/ESP32/GSM/gsm_state_machine
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -86,6 +90,8 @@ MFLAGS = -pqrR
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # automatic
 +D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# environment
+IDF_TOOLS_PATH = C:\Espressif
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST := makefile
 # automatic
@@ -93,7 +99,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 15092
+VSCODE_PID = 14832
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -127,7 +133,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\tools\dart-sdk;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\;C:\Users\mahmu\AppData\Local\Microsoft\WindowsApps;C:\Users\mahmu\AppData\Local\Programs\Microsoft VS Code\bin;G:\arduino-cli_0.21.1_Windows_64bit;C:\MinGW\bin;C:\flutter\bin;C:\Users\mahmu\.dotnet\tools;C:\Users\mahmu\AppData\Roaming\npm
+PATH = C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\tools\dart-sdk;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\mahmu\.cargo\bin;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\mahmu\AppData\Local\Programs\Microsoft VS Code\bin;G:\arduino-cli_0.21.1_Windows_64bit;C:\MinGW\bin;C:\flutter\bin;%USERPROFILE%\.dotnet\tools;C:\Users\mahmu\AppData\Roaming\npm;C:\Espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-x86_64-pc-windows-msvc/bin/;C:\Users\mahmu/AppData/Local/Programs/jaguar;
 # environment
 ZES_ENABLE_SYSMAN = 1
 # environment
@@ -143,8 +149,7 @@ CHOCOLATEYLASTPATHUPDATE = 132921652043835665
 # environment
 LOGONSERVER = \\MYPC-299
 # environment
-VSCODE_LOG_NATI 
-VE = false
+VSCODE_LOG_NATIVE = false
 # environment
 USERNAME = mahmu
 # environment
@@ -168,7 +173,7 @@ GNUMAKEFLAGS :=
 # environment
 OS = Windows_NT
 # environment
-PLATFORMIO_PATH = C:\Users\mahmu\.platformio\python3;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\tools\dart-sdk;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\;C:\Users\mahmu\AppData\Local\Microsoft\WindowsApps;C:\Users\mahmu\AppData\Local\Programs\Microsoft VS Code\bin;G:\arduino-cli_0.21.1_Windows_64bit;C:\MinGW\bin;C:\flutter\bin;C:\Users\mahmu\.dotnet\tools;C:\Users\mahmu\AppData\Roaming\npm;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\tools\dart-sdk;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\;C:\Users\mahmu\AppData\Local\Microsoft\WindowsApps;C:\Users\mahmu\AppData\Local\Programs\Microsoft VS Code\bin;G:\arduino-cli_0.21.1_Windows_64bit;C:\MinGW\bin;C:\flutter\bin;C:\Users\mahmu\.dotnet\tools;C:\Users\mahmu\AppData\Roaming\npm
+PLATFORMIO_PATH = C:\Users\mahmu\.platformio\python3;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\tools\dart-sdk;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\mahmu\.cargo\bin;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\;C:\Users\mahmu\AppData\Local\Microsoft\WindowsApps;C:\Users\mahmu\AppData\Local\Programs\Microsoft VS Code\bin;G:\arduino-cli_0.21.1_Windows_64bit;C:\MinGW\bin;C:\flutter\bin;C:\Users\mahmu\.dotnet\tools;C:\Users\mahmu\AppData\Roaming\npm;C:\Espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-x86_64-pc-windows-msvc/bin/;C:\Users\mahmu/AppData/Local/Programs/jaguar;;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\tools\dart-sdk;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\mahmu\.cargo\bin;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\mahmu\AppData\Local\Programs\Python\Python39\;C:\Users\mahmu\AppData\Local\Microsoft\WindowsApps;C:\Users\mahmu\AppData\Local\Programs\Microsoft VS Code\bin;G:\arduino-cli_0.21.1_Windows_64bit;C:\MinGW\bin;C:\flutter\bin;C:\Users\mahmu\.dotnet\tools;C:\Users\mahmu\AppData\Roaming\npm;C:\Espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-x86_64-pc-windows-msvc/bin/;C:\Users\mahmu/AppData/Local/Programs/jaguar;
 # makefile
 .DEFAULT_GOAL := build_l
 # makefile (from 'makefile', line 4)
@@ -198,16 +203,15 @@ PLATFORMIO_IDE = 2.4.3
 # makefile (from 'makefile', line 3)
 FQBN3 = esp32:esp32:esp32:PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=none
 # environment
-COMMONPROGRAMF 
-ILES(X86) = C:\Program Files (x86)\Common Files
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # makefile (from 'makefile', line 1)
-SERIAL_ESP32_PORT = COM14
+SERIAL_ESP32_PORT = COM4
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\mahmu\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\cbd65a7f3880dfc7ce68caff7ee16790-1.67.0-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\cbd65a7f3880dfc7ce68caff7ee16790-1.67.2-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -218,10 +222,6 @@ SUFFIXES :=
 ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -231,16 +231,15 @@ CC = arduino-cli
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
 # variable set hash-table stats:
-# Load=108/1024=11%, Rehash=0, Collisions=11/135=8%
+# Load=109/1024=11%, Rehash=0, Collisions=12/136=9%
 
 # Pattern-specific Variable Values
 
-# No 
- pattern-specific variable values.
+# No pattern-specific variable values.
 
 # Directories
 
-# . (key d:/All Practice/ESP32/GSM/gsm_state_machine, mtime 1652186047): 15 files, no impossibilities.
+# . (key d:/all_learning/MCU_SOC_MPU/ESP32/GSM/gsm_state_machine, mtime 1652713505): 15 files, no impossibilities.
 
 # 15 files, no impossibilities in 1 directories.
 
@@ -249,13 +248,6 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
 # No implicit rules.
 
 # Files
-
-build_d:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'makefile', line 12):
-	$(CC) compile -b $(FQBN3) $(CFLAGS_DEVKIT) --warnings all 
 
 build_l:
 #  Implicit rule search has not been done.
@@ -284,10 +276,17 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 12):
+	$(CC) compile -b $(FQBN3) $(CFLAGS_DEVKIT) --warnings all 
+
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-20 13:02:55
+#  Last modified 2022-05-27 13:56:32
 #  File has been updated.
 #  Successfully updated.
 
@@ -299,12 +298,12 @@ makefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 174 B / avg = 8 B
-# current buf: size = 8174 B / used = 174 B / count = 21 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 172 B / avg = 8 B
+# current buf: size = 8174 B / used = 172 B / count = 21 / avg = 8 B
 
 # strcache performance: lookups = 28 / hit rate = 25%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Tue May 10 18:38:47 2022
+# Finished Make data base on Sat May 28 11:49:54 2022
 
  

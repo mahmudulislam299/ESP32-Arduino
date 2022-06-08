@@ -83,12 +83,12 @@ void test()
 
 void simBegin()
 {  
-  pinMode(MODEM_PWKEY, OUTPUT);
+  // pinMode(MODEM_PWKEY, OUTPUT);
   pinMode(MODEM_RST, OUTPUT);
-  pinMode(MODEM_POWER_ON, OUTPUT);
-  digitalWrite(MODEM_PWKEY, LOW);
+  // pinMode(MODEM_POWER_ON, OUTPUT);
+  // digitalWrite(MODEM_PWKEY, LOW);
   digitalWrite(MODEM_RST, HIGH);
-  digitalWrite(MODEM_POWER_ON, HIGH);
+  // digitalWrite(MODEM_POWER_ON, HIGH);
 
   SerialAT.begin(SERIAL_AT_BAUD_RATE, SERIAL_8N1, MODEM_RX, MODEM_TX);
   
