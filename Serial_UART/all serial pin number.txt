@@ -14,3 +14,4 @@ UART2	GPIO16	GPIO17	GPIO8	GPIO7
  * U2UXD is unused and can be used for your projects.
  * 
 */
+387
