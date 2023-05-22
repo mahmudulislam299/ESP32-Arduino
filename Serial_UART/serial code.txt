@@ -1,0 +1,32 @@
+#if defined(ARDUINO_UNO)
+  #include <SoftwareSerial.h>
+#elif defined (ESP32)
+  #include <HardwareSerial.h>
+#endif
+#include "BatteryManager.h"
+
+#if defined(ARDUINO_UNO)
+  SoftwareSerial rs232ttl(2, 3); // RX, TX
+#elif defined(ESP32)
+
+  #if defined(SER2)
+    HardwareSerial rs232ttl(2);
+  #elif defined(SER1)
+    HardwareSerial rs232ttl(1);
+  #endif
+#endif
+
+BatteryManager myBattery(&rs232ttl);
+
+void setup() {
+  Serial.begin(9600);
+
+  #if defined (ARDUINO_UNO)
+    rs232ttl.begin(9600);
+  #else
+    #if defined (SER2) 
+      rs232ttl.begin(9600 ,SERIAL_8E1, 16, 17);
+    #elif defined(SER1)
+      rs232ttl.begin(9600, SERIAL_8N1, 26,27 );
+    #endif
+  #endif

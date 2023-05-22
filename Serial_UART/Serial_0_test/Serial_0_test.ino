@@ -9,7 +9,7 @@ int serialAvail = 0;
 
 void setup() {
   // Note the format for setting a serial port is as follows: Serial2.begin(baud-rate, protocol, RX pin, TX pin);
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println("Start Test Begin");
 
 }

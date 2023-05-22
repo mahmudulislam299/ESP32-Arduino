@@ -9,8 +9,8 @@
 //#define TXD1 27
 
 // this another test pin for serial1 test
-#define RXD1 12 
-#define TXD1 13
+#define RXD1 14 
+#define TXD1 12
 
 
 void setup() {
